@@ -1,0 +1,15 @@
+@for (pokemon of pokemons(); track pokemon.id) {
+  <div [id]="pokemon.id" class="pokemon">
+    <div>
+      <span>Name: {{ pokemon.name }}</span>
+    </div>
+    <div>
+      <span>Type: {{ pokemon.type }}</span>
+    </div>
+    <div>
+      <img [src]="pokemon.sprite" class="pokemon__img">
+    </div>
+  </div>
+} @empty {
+  <div>Не передан массив покемонов</div>
+}

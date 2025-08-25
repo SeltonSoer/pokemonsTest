@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  @for (type of pokemonTypes(); track $index) {
+    <div>
+      <input type="checkbox" [formControlName]="type">
+      <span>{{ type }}</span>
+    </div>
+  } @empty {
+    <div>Не переданы типы покемонов</div>
+  }
+</form>
